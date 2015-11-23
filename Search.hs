@@ -21,7 +21,7 @@ binary xs x = binary1 xs x 1 (length xs)
   where
     binary1 xs x s e
         | x < el = binary1 xs x s elemAt
-        | x > el = binary1 xs x elemAt e
+        | x > el = binary1 xs x (elemAt+1) e
         | otherwise = elemAt
       where
         elemAt = (s+e) `div` 2
